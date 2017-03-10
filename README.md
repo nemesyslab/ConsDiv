@@ -10,7 +10,7 @@ perl RTLgenerator.pl  divisor areaPartitioning
 For print selection enter number between 0-3, first bit 1 for tree, second bit 1 for print calculations
 
 PartitionType can be areaPartitioning or timePartitioning
-<br>
+<br><br>
 
 perl estimator.pl dividend_bitlength divisor rate force_partition prints_selection
 
@@ -23,7 +23,7 @@ For print selection enter number between 0-3, first bit 1 for tree, second bit 1
 
 PartitionType can be areaPartitioning or timePartitioning
 
-<br>
+<br><br>
 perl estimator_CST.pl dividend_bitlength divisor rate force_partition prints_selection
 
 perl RTLgenerator.pl divisor PartitionType
