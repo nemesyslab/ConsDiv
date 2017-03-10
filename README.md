@@ -11,7 +11,9 @@ For print selection enter number between 0-3, first bit 1 for tree, second bit 1
 
 PartitionType can be areaPartitioning or timePartitioning
 
+
 perl estimator.pl dividend_bitlength divisor rate force_partition prints_selection
+
 perl RTLgenerator.pl divisor PartitionType
  
  
@@ -21,7 +23,9 @@ For print selection enter number between 0-3, first bit 1 for tree, second bit 1
 
 PartitionType can be areaPartitioning or timePartitioning
 
+
 perl estimator_CST.pl dividend_bitlength divisor rate force_partition prints_selection
+
 perl RTLgenerator.pl divisor PartitionType
  
  
