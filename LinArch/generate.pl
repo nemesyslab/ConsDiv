@@ -92,8 +92,8 @@ for(my $dvsr = $min_divisor ; $dvsr <= $max_divisor ; ++$dvsr){
       if ( (2**$bl) > $dvsr ) {
     
         system("/usr/bin/perl gen.pl $dvsr $bl $partitionBase");
-        system("/usr/bin/perl tb_gen.pl $dvsr $bl");
-        system("/usr/bin/perl wrapper_gen.pl $dvsr $bl");
+#        system("/usr/bin/perl tb_gen.pl $dvsr $bl");
+#        system("/usr/bin/perl wrapper_gen.pl $dvsr $bl");
       
       }  
     }

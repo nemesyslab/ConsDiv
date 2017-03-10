@@ -18,7 +18,7 @@
 ##                                                                                         ##                                                                    
 #############################################################################################
 ## Sample call: ">> perl generate.pl [min_divisor] [max_divisor] [min_bitlength]           ##
-##                                   [max_bitlength] [k_value]   [PartitionType]           ##
+##                                   [max_bitlength]  [PartitionType]                      ##
 #############################################################################################
 
 
@@ -42,10 +42,10 @@ sub is_power_of_2 {
 # =======================================================================================
 
 # Number of input arguments must be 4...........................................
-if($#ARGV != 5){
+if($#ARGV != 4){
   die "\nERROR 001: Number of input arguments do not hold\n\n",
       "           Arguments should be as:\n",
-      "           Min_Divisor - Max_Divisor - Min_BitLength - Max_BitLength - k_value - Area(0)_or_Time(1)\n\n" ;
+      "           Min_Divisor - Max_Divisor - Min_BitLength - Max_BitLength - Area(0)_or_Time(1)\n\n" ;
 }
 
 # All inputs must be numeric ...................................................
@@ -57,7 +57,7 @@ for( my $ii = 0; $ii <= $#ARGV ; ++$ii){
 
 
 # All input arguments must be an integer greater than 1 ........................
-for( my $ii = 0; $ii <= $#ARGV-2 ; ++$ii){
+for( my $ii = 0; $ii <= $#ARGV-1 ; ++$ii){
   if( (floor($ARGV[$ii]) != $ARGV[$ii]) || ($ARGV[$ii] <= 2) ){
     die "\nERROR 003: All input arguments must be integers greater than 2.\n\n";
   }
@@ -69,8 +69,7 @@ my $min_divisor = $ARGV[0];
 my $max_divisor = $ARGV[1];
 my $min_bitlen  = $ARGV[2];
 my $max_bitlen  = $ARGV[3];
-my $k  = $ARGV[4];
-my $partitionBase  = $ARGV[5];
+my $partitionBase  = $ARGV[4];
 
 #################################################### End of Assign the Input Arguments ##
 
@@ -92,9 +91,9 @@ for(my $dvsr = $min_divisor ; $dvsr <= $max_divisor ; ++$dvsr){
     if(is_power_of_2($dvsr) == 0){
       if ( (2**$bl) > $dvsr ) {
     
-        system("/usr/bin/perl gen.pl $dvsr $bl $k");
+        system("/usr/bin/perl estimator.pl $bl $dvsr 100000 7 1");
 	if($partitionBase==0){
-		system("/usr/bin/perl .RTLgenerator.pl $dvsr areaPartitioning");   
+		system("/usr/bin/perl RTLgenerator.pl $dvsr areaPartitioning");   
 	}
 	else{
 		system("/usr/bin/perl RTLgenerator.pl $dvsr timePartitioning");   

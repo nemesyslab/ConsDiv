@@ -99,8 +99,8 @@ for(my $dvsr = $min_divisor ; $dvsr <= $max_divisor ; ++$dvsr){
 		system("/usr/bin/perl CST_RTLgenerator.pl $dvsr timePartitioning");   
 	}
 	
-        system("/usr/bin/perl common/tb_gen.pl $dvsr $bl");
-        system("/usr/bin/perl wrapper_gen.pl $dvsr $bl");
+#        system("/usr/bin/perl common/tb_gen.pl $dvsr $bl");
+#        system("/usr/bin/perl wrapper_gen.pl $dvsr $bl");
       
       }  
     }
