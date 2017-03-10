@@ -26,7 +26,8 @@ perl generate.pl
 #To generate Reciprocal
  
 perl recip.pl
- 
+
+
 Synthesize files under Synthesize.
 TestBench and wrapper generators under TestBench&Wrapper.
  
