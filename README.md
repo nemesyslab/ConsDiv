@@ -1,6 +1,6 @@
 #To generate BTCD and BTCD_CST:  
 
-<b>perl gen.pl<\b> divisor dividend_bitlength k_value
+<b>perl gen.pl<b> divisor dividend_bitlength k_value
 
 perl RTLgenerator.pl  divisor areaPartitioning
     
