@@ -23,11 +23,12 @@ perl RTLgenerator.pl
 perl generate.pl
  
  
-#To generate Reciprocal
+#To generate Reciprocal:
  
 perl recip.pl
 
 
 Synthesize files under Synthesize.
+
 TestBench and wrapper generators under TestBench&Wrapper.
  
