@@ -46,3 +46,6 @@ PartitionType can be areaPartitioning or timePartitioning
 
 <br><br>
 Synthesize files under Synthesize.
+<br><br>
+<br><br>
+<b>Contact:</b>fatih.ugurdag@ozyegin.edu.tr
